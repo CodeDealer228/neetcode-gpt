@@ -26,6 +26,5 @@ class Solution:
         n = len(y_true)
         #y_pred= np.array(y_pred)+eps
         #y_true = np.array(y_true)
-        loss = -sum(y_true[i] * np.log(y_pred[i]) \
-                    for i in range(n)) / n 
+        loss = -sum(y_true * np.log(y_pred+eps) ) / n 
         return np.round(sum(loss), 4)
