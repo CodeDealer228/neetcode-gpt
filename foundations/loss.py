@@ -24,8 +24,8 @@ class Solution:
 
         eps = 1e-7
         n = len(y_true)
-        y_pred= np.array(y_pred)+eps
-        y_true = np.array(y_true)
+        #y_pred= np.array(y_pred)+eps
+        #y_true = np.array(y_true)
         loss = -sum(y_true[i] * np.log(y_pred[i]) \
                     for i in range(n)) / n 
         return np.round(sum(loss), 4)
